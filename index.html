@@ -1,1 +1,99 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>eFootball Sénégal Pro</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#071b16;color:white;font-family:Arial,sans-serif}
+header{padding:20px;background:#103c2b;text-align:center;color:#40e99c;font-size:22px;font-weight:bold}
+.hero{text-align:center;padding:65px 15px;background:linear-gradient(135deg,#145b3c,#071b16)}
+h1{font-size:34px}
+p{line-height:1.7}
+section{padding:30px 18px;max-width:750px;margin:auto}
+h2{text-align:center}
+.card{background:#123629;padding:20px;margin:12px 0;border-radius:12px;text-align:center}
+.prix{color:#48e9a1;font-size:27px;font-weight:bold}
+input,select{width:100%;padding:14px;margin:9px 0;background:#071b16;border:1px solid #438363;border-radius:8px;color:white}
+button,.btn{display:block;background:#28db8d;color:#06251a;padding:14px;border:0;border-radius:8px;text-decoration:none;text-align:center;font-weight:bold;width:100%;margin-top:15px}
+label{font-size:14px}
+footer{text-align:center;background:#103c2b;padding:22px;color:#ccc}
+</style>
+</head>
+<body>
+<header>⚽ eFOOTBALL SÉNÉGAL PRO</header>
+
+<div class="hero">
+<p>LE GRAND TOURNOI eFOOTBALL MOBILE</p>
+<h1>DEVENEZ LE CHAMPION !</h1>
+<p>16 joueurs • 1 000 FCFA par inscription</p>
+<a class="btn" href="#inscription">S'INSCRIRE MAINTENANT</a>
+</div>
+
+<section>
+<h2>🏆 Informations du tournoi</h2>
+<div class="card"><div class="prix">16 JOUEURS</div>Places disponibles au maximum</div>
+<div class="card"><div class="prix">1 000 FCFA</div>Frais d'inscription</div>
+<div class="card"><div class="prix">MOBILE</div>Android et iPhone</div>
+</section>
+
+<section>
+<h2>🥇 Récompenses</h2>
+<div class="card">🥇 CHAMPION<div class="prix">10 000 FCFA</div></div>
+<div class="card">🥈 FINALISTE<div class="prix">5 000 FCFA</div></div>
+</section>
+
+<section>
+<h2>💳 Paiement</h2>
+<div class="card">WAVE<br><div class="prix">77 793 97 31</div></div>
+<div class="card">ORANGE MONEY<br><div class="prix">77 793 97 31</div></div>
+<p>Après le paiement, envoie ta preuve à l'organisateur. Ton inscription sera validée après vérification.</p>
+</section>
+
+<section id="inscription">
+<h2>📝 Inscription</h2>
+<form id="form">
+<label>Nom complet</label>
+<input id="nom" required placeholder="Ton nom">
+<label>Numéro WhatsApp</label>
+<input id="telephone" required placeholder="77 XXX XX XX">
+<label>Pseudo eFootball</label>
+<input id="pseudo" required placeholder="Ton nom de joueur">
+<label>Moyen de paiement</label>
+<select id="paiement" required>
+<option value="">Choisir</option>
+<option>Wave</option>
+<option>Orange Money</option>
+</select>
+<label>Référence de transaction (facultatif)</label>
+<input id="reference" placeholder="Référence">
+<button type="submit">ENVOYER MON INSCRIPTION</button>
+</form>
+</section>
+
+<section>
+<h2>📞 Organisateur</h2>
+<div class="card">WhatsApp : +221 76 349 03 34
+<a class="btn" href="https://wa.me/221763490334">CONTACTER SUR WHATSAPP</a>
+</div>
+</section>
+
+<footer>© 2026 eFootball Sénégal Pro<br>La compétition commence ici !</footer>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+const nom=document.getElementById("nom").value;
+const tel=document.getElementById("telephone").value;
+const pseudo=document.getElementById("pseudo").value;
+const paiement=document.getElementById("paiement").value;
+const reference=document.getElementById("reference").value;
+const message=`Bonjour, je souhaite participer à eFootball Sénégal Pro.%0ANom : ${encodeURIComponent(nom)}%0ATéléphone : ${encodeURIComponent(tel)}%0APseudo : ${encodeURIComponent(pseudo)}%0APaiement : ${encodeURIComponent(paiement)}%0ARéférence : ${encodeURIComponent(reference)}%0AMontant : 1000 FCFA`;
+window.open("https://wa.me/221763490334?text="+message,"_blank");
+});
+</script>
+</body>
+</html>
+
